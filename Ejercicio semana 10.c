@@ -66,3 +66,19 @@ int main()
     }
 
     printf("\nEl año con la mayor cantidad de alumnos ingresaron a la universidad fue: %d\n", Ami);
+    // Calculo de b) La Carrera que recibió la mayor cantidad de alumnos en el último año.
+    int Mis = 0; // el mayor numero de ingresos que se registro
+    int cma = 0; // la carrera a la que entraron la mayor cantidad de alumnos
+
+    for (c = 0; c < 7; c++)
+    {
+        int tdi = Datos[5 - 1][2 - 1][c]; // total de ingresos
+
+        if (tdi > Mis)
+        {
+            Mis = tdi;
+            cma = c;
+        }
+    }
+
+    printf("\nLa carrera que recibio la mayor cantidad de alumnos inscritos este ultmo año fue la de %s\n", materias[cma]);
