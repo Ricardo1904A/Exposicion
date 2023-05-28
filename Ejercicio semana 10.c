@@ -82,3 +82,23 @@ int main()
     }
 
     printf("\nLa carrera que recibio la mayor cantidad de alumnos inscritos este ultmo año fue la de %s\n", materias[cma]);
+    // Calculo de c) ¿En qué año la carrera de Ingeniería de Software recibió la mayor cantidad de alumnos?
+    int Is = 0; // Ingenieria en software
+    int Im = 0; // Ingresos mayores
+    int Am = 0; // Años con mayor cantidad de alumnos que ingresaron
+
+    for (a = 0; a < 5; a++)
+    {
+        int idl = Datos[a][2 - 1][Is]; // ingresos de la carrera
+
+        if (idl > Im)
+        {
+            Im = idl;
+            Am = 2023 - 5 + a;
+        }
+    }
+
+    printf("\nLa carrera de Ingeniería de Software recibió la mayor cantidad de alumnos en el año: %d\n", Am);
+
+    return 0;
+}
