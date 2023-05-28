@@ -42,3 +42,27 @@ int main()
             }
         }
     }
+    // Calculo de a) El año en que ingresó la mayor cantidad de alumnos a la universidad.
+    int Ami = 0; // Años de maximo ingreso
+    int Mi = 0;  // Numero maximo de ingreso
+
+    for (a = 0; a < 5; a++)
+    {
+        int ti = 0; // total de ingresos se iguala a 0
+
+        for (s = 0; s < 2; s++)
+        {
+            for (c = 0; c < 7; c++)
+            {
+                ti += Datos[a][s][c];
+            }
+        }
+
+        if (ti > Mi)
+        {
+            Mi = ti;
+            Ami = 2023 - 5 + a;
+        }
+    }
+
+    printf("\nEl año con la mayor cantidad de alumnos ingresaron a la universidad fue: %d\n", Ami);
