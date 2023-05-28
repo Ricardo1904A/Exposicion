@@ -10,3 +10,22 @@ char *materias[] = {
     "Matematicas",
     "Contabilidad",
     "Ingenieria Industrial"};
+int main()
+{
+
+    srand(time(NULL));
+
+    // Se genera una matriz de datos usando el numero de años (5),el numero de semestres(2)y el numero de carreras que son (7)
+    int Datos[5][2][7];
+    int a, s, c; // a= años, s= semestre, c= carreras
+
+    for (a = 0; a < 5; a++)
+    {
+        for (s = 0; s < 2; s++)
+        {
+            for (c = 0; c < 7; c++)
+            {
+                Datos[a][s][c] = rand() % 201; // Generar los datos aleatoriamente entre 0 y 200
+            }
+        }
+    }
